@@ -10,29 +10,21 @@ app.config['SECRET_KEY'] = 'my secrect key'
 db = mysql.connector.connect(
     host="localhost",
     user="root",
-    passwd = "rootroot",
+    passwd = "**********",
     database = "employees"
 ) 
 
 @app.route("/")
 def index():
-    #cur = db.cursor(dictionary=True)
-    #cur.execute("select * from employee;")
-    #userDetails = cur.fetchall()
     return render_template('index.html')
-    #for user in userDetails: print(user)
-    #return render_template('index.html',userDetails=userDetails)
-    #return render_template('templates/index.html')
-
+   
 @app.route("/employee", methods=['GET','POST'])
 def employee():
     cur = db.cursor(dictionary=True)
     cur.execute("select * from employee;")
     userDetails = cur.fetchall()
-    #for user in userDetails: print(user)
     return render_template('employee.html',userDetails=userDetails)
-    #return render_template('templates/index.html')
-
+    
 @app.route("/insert", methods=['POST']) 
 def insert():
     if request.method == 'POST':
@@ -82,23 +74,5 @@ def delete(emp_id):
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-
-"""
-def main():
-    if request.method == 'POST':
-        userDetails = request.form
-        name = userDetails['name']
-        email = userDetails['email']
-        cur = db.cursor()
-        cur.execute("insert into users(name,email) values(%s,%s);",(name,email))
-        db.commit()
-        cur.close()
-        return redirect('/users')
-    return render_template('index.html')
-
-@app.route("/users")
-
-"""
 
 
