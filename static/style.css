@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background-image: linear-gradient(lightgrey,lightcyan);
+    opacity: 0.8;
+}
+
+.toggle_menu {
+    position: fixed;
+    padding: 15px 20px 15px 15px;
+    margin-top: 80px;
+    color: cyan;
+    cursor: pointer;
+    background-color: rgba(18, 18, 18,0.9);
+    z-index: 1000000;
+    font-size: 8em;
+    opacity: 0;
+}
+
+.sidebar_menu{
+    position: fixed;
+    width: 250px;
+    margin-left: 0px;
+    overflow: hidden;
+    height: 100vh;    
+    max-height: 100vh;
+    background-color: rgba(15, 15, 15,1);
+    opacity: 0.9;
+    transition: all 0.3s ease-in-out;
+}
+
+.fa-times{
+    right: 10px;
+    top: 10px;
+    opacity: 0.7;
+    cursor: pointer;
+    position: absolute;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.fa-times:hover{
+    opacity: 1 ;
+    color: cyan
+}
+
+.boxed_item{
+    font-family: "Open Sans";
+    font-weight: 200;
+    padding: 10px 20px;
+    display: inline-block;
+    border: solid 2px white;
+    box-sizing: border-box;
+    font-size: 22px;
+    color: cyan;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.logo_bold{
+    font-weight: 800;
+}
+
+.logo_title{
+    color: white;
+    font-family: "Open Sans";
+    font-weight: 200;
+    font-size: 12px;
+    text-align: center;
+    padding: 5px 0;
+}
+
+.navigation_selection{
+    margin: 80px 0;
+    display: block;
+    width: 200px;
+    margin-left: 25px;
+}
+
+.navigation_item{
+    font-family: "Open Sans";
+    font-weight: 400;
+    color: white;
+    padding: 8px 0;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #d8d8d8;
+    border-bottom: solid 1px #d8d8d8;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.navigation_item:hover{
+    color: cyan;
+    font-weight: 600;
+    border-bottom: solid 1px cyan;
+}
+
+.fa-users{
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.fa-building{
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.fa-list{
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.fa-flag{
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.fa-heart{
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.boxed_item_smaller{
+    font-size: 12px;
+    color: #d8d8d8;
+    width: 200px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    border-width: 1px;
+    margin: 0 0 10px 0;
+}
+
+.boxed_item_smaller:hover{
+    color: cyan;
+    font-weight: 600;
+    border-color: cyan;
+    transition: all 0.3s ease-in-out;
+}
+
+.fa-phone{
+    margin-right: 15px;
+}
+
+.hide_menu{
+    margin-left: -250px;
+}
+
+.opacity_one{
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.home{
+    position: relative;
+    left: 280px;
+    height: 100vh;
+    width: calc(100% - 280px);
+    transition: all 0.3s ease-in-out;
+}
+
+.home_left{
+    left: 80px;
+    width: calc(100% - 80px);
+    transition: all 0.3s ease-in-out;
+}
+
+/*
+.home .text{
+    font-size: 30px;
+    font-weight: 500;
+    color: cyan;
+    padding: 8px 40px;
+}
+*/
+
+.box{
+    width: 300px;
+    padding: 40px;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    transform: translate(-50%,-50%);
+    background: #222222;
+    font-family: sans-serif;
+    text-align: center;
+  }
+
+  .box h1{
+    color: cyan;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .box input[type = "text"],.box input[type = "password"]{
+    border:0;
+    background: none;
+    display: block;
+    margin: 40px auto;
+    text-align: center;
+    border: 2px solid cyan;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 24px;
+    transition: 0.25s;
+  }
+
+  .box input::placeholder{
+    color: lightcyan;
+  }
+
+  .box input[type = "text"]:focus,.box input[type = "password"]:focus{
+    width: 260px;
+    border-color: lightsalmon;
+  }
+
+  .box input[type = "submit"]{
+    border:0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid lightsalmon;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+  }
+
+  .box input[type = "submit"]:hover{
+    background: lightsalmon;
+    font-weight: 600;
+    border-color: lightsalmon;
+  }
+
+
+
+
+
+

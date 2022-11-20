@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="../static/hive.svg">
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300", rel="stylesheet" type="text/css">
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <!--<script src="menu.js"></script> -->
+    <title>Slide out Navigation Bar</title>
+</head>
+<body>
+    <i class="fa fa-bars toggle_menu"></i>
+    <div class="sidebar_menu">
+        <i class="fa fa-times"></i>
+        <center>
+            <a href="#"><h1 class="boxed_item">KEEP  <span class="logo_bold">GOING</span></h1></a>
+            <h2 class="logo_title">Professional people do professional things</h2>
+        </center>
+
+        <ul class="navigation_selection">
+            <li class="navigation_item"><i class="fa fa-users"></i><a href="/" class="navigation_item">LOGIN</a></li>
+            <li class="navigation_item"><i class="fa fa-building"></i><a href="employee" class="navigation_item">EMPLOYEE INFO</a></li>
+            <li class="navigation_item"><i class="fa fa-list"></i>WORK SCHEDULE</li>
+            <li class="navigation_item"><i class="fa fa-flag"></i>PERFORMANCE</li>
+            <li class="navigation_item"><i class="fa fa-heart"></i>INTERESTS</li>
+        </ul>
+        
+        <center>
+            <a href="employee">
+                <h1 class="boxed_item boxed_item_smaller">
+                    <i class="fa fa-phone"></i>
+                        CONTACT  US
+                </h1>
+            </a>
+        </center>
+    </div>
+
+    <div class="home" id="content">
+        <form class="box">
+            <h1>Login</h1>
+            <input type="text" name="" placeholder="Username">
+            <input type="password" name="" placeholder="Password">
+            <input type="submit" name="" value="Login">
+        </form>         
+    </div>
+
+<script>
+
+$(document).ready(function(){
+    $(".fa-times").click(function(){
+        $(".sidebar_menu").addClass("hide_menu");
+        $(".toggle_menu").addClass("opacity_one");
+        $(".home").addClass("home_left");          
+    });
+
+    $(".toggle_menu").click(function(){
+        $(".sidebar_menu").removeClass("hide_menu");
+        $(".toggle_menu").removeClass("opacity_one"); 
+        $(".home").removeClass("home_left");          
+    });
+}); 
+
+</script>
+
+</body>
+</html>
